@@ -1,21 +1,30 @@
 import React, { Component } from 'react'
 import Table from './table'
-import Upload from './upload'
 
 class App extends Component {
 
   state = {
-    tracks: []
+    tracklist: [
+      {
+        artist: "Joy O",
+        track: "Burn",
+        label: "Hinge Finger"
+      },
+      {
+        artist: "Pearson Sound",
+        track: "Starburst",
+        label: "Hessle Audio"
+      }
+    ],
   }
 
   render() {
 
-    const { tracks } = this.state
+    const { tracklist } = this.state
 
     return (
       <div className="container">
-    <Upload />
-    <Table tracklist={tracks} />
+    <Table tracklist={tracklist}/>
       </div>
     )
   }

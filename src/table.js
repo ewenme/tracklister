@@ -1,27 +1,13 @@
 import React, { Component } from 'react'
 
-const TableHeader = () => {
-    return (
-      <thead>
-        <tr>
-          <th>Artist</th>
-          <th>Track</th>
-        </tr>
-      </thead>
-    )
-  }
-
-const TableBody = props => {
+const Tracklist = props => {
   const rows = props.tracklist.map((row, index) => {
     return (
-      <tr key={index}>
-        <td>{row.artist}</td>
-        <td>{row.track}</td>
-      </tr>
+        <li key={index}>{row.artist} - {row.track} ({row.label})</li>
     )
   })
 
-  return <tbody>{rows}</tbody>
+  return <ul style={{listStyleType:"none"}}>{rows}</ul>
 }
 
 class Table extends Component {
@@ -29,10 +15,7 @@ class Table extends Component {
         const { tracklist } = this.props
 
       return (
-        <table>
-          <TableHeader />
-          <TableBody tracklist={tracklist} />
-        </table>
+          <Tracklist tracklist={tracklist} />
       )
     }
   }
