@@ -1,24 +1,45 @@
 import React, { Component } from 'react'
-import Table from './tracklist'
+import Tracklist from './tracklist'
 
 class App extends Component {
 
   state = {
     tracks: [
       {
-        artist: "me",
-        track: "you"
+        artist: "Joy O",
+        track: "Slipping",
+        label: "Hinge Finger",
+      },
+      {
+        artist: "Chance the Rapper",
+        track: "Problems (feat. 2 Chainz)",
+      },
+      {
+        artist: "Spooky",
+        track: "Joyride",
+        label: "Oil Gang",
       }
     ],
+    track_numbers: true
+  }
+
+  toggleTrackNumbers = () => {
+  
+    this.setState(prevState => ({
+      track_numbers: !prevState.track_numbers
+    }));
   }
 
   render() {
 
-    const { tracks } = this.state
+    const { tracks, track_numbers } = this.state
 
     return (
       <div className="container">
-    <Table trackData={tracks}/>
+        <Tracklist 
+        trackData={tracks} trackNumber={track_numbers} 
+        toggleTrackNumbers={this.toggleTrackNumbers}
+        />
       </div>
     )
   }
