@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
-const Tracklist = props => {
-  const rows = props.tracklist.map((row, index) => {
+const TrackLayout = props => {
+  const rows = props.trackData.map((row, index) => {
     return (
         <li key={index}>{row.artist} - {row.track} ({row.label})</li>
     )
@@ -10,14 +10,14 @@ const Tracklist = props => {
   return <ul style={{listStyleType:"none"}}>{rows}</ul>
 }
 
-class Table extends Component {
+class Tracklist extends Component {
     render() {
-        const { tracklist } = this.props
+        const { trackData } = this.props
 
       return (
-          <Tracklist tracklist={tracklist} />
+          <TrackLayout trackData={trackData} />
       )
     }
   }
 
-export default Table
+export default Tracklist

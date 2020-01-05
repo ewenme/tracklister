@@ -1,30 +1,24 @@
 import React, { Component } from 'react'
-import Table from './table'
+import Table from './tracklist'
 
 class App extends Component {
 
   state = {
-    tracklist: [
+    tracks: [
       {
-        artist: "Joy O",
-        track: "Burn",
-        label: "Hinge Finger"
-      },
-      {
-        artist: "Pearson Sound",
-        track: "Starburst",
-        label: "Hessle Audio"
+        artist: "me",
+        track: "you"
       }
     ],
   }
 
   render() {
 
-    const { tracklist } = this.state
+    const { tracks } = this.state
 
     return (
       <div className="container">
-    <Table tracklist={tracklist}/>
+    <Table trackData={tracks}/>
       </div>
     )
   }
