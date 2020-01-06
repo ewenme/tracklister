@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Upload from "./upload";
 import Tracklist from "./tracklist";
 import Clipboard from "./clipboard";
 
@@ -34,6 +35,7 @@ class App extends Component {
 
     return (
       <div className="container">
+        <Upload />
         <Tracklist
           trackData={tracks}
           trackNumber={track_numbers}
