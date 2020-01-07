@@ -3,9 +3,6 @@ import Dropzone from "react-dropzone";
 import xml2js from "xml2js";
 import Tracklist from "./tracklist";
 import Clipboard from "./clipboard";
-/*
-import Upload from "./upload";
-*/
 
 class App extends Component {
   state = {
@@ -22,7 +19,6 @@ class App extends Component {
         reader.onabort = () => console.log("file reading was aborted");
         reader.onerror = () => console.log("file reading has failed");
         reader.onload = () => {
-          // Do whatever you want with the file contents
           const binaryStr = reader.result;
           const parser = new xml2js.Parser();
           parser.parseString(binaryStr);
@@ -123,12 +119,14 @@ class App extends Component {
 
     return (
       <div className="container">
-        <Dropzone onDrop={this.onDrop}>
-          {({ getRootProps, getInputProps }) => (
+        <Dropzone onDrop={this.onDrop} accept=".nml" multiple={false}>
+          {({ getRootProps, getInputProps, isDragActive }) => (
             <section className="container">
               <div {...getRootProps({ className: "dropzone" })}>
                 <input {...getInputProps()} />
-                <p>Drag 'n' drop some files here, or click to select files</p>
+                {isDragActive
+                  ? "stop, drop!"
+                  : "click here or drag a file to upload"}
               </div>
             </section>
           )}
