@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Dropzone from "react-dropzone";
 import xml2js from "xml2js";
 import Tracklist from "./tracklist";
-import Clipboard from "./clipboard";
 
 class App extends Component {
   state = {
@@ -120,8 +119,8 @@ class App extends Component {
     return (
       <div className="container">
         <Dropzone onDrop={this.onDrop} accept=".nml" multiple={false}>
-          {({ getRootProps, getInputProps, isDragActive }) => (
-            <section className="container">
+          {({ getRootProps, getInputProps, isDragActive, isDragReject }) => (
+            <section>
               <div {...getRootProps({ className: "dropzone" })}>
                 <input {...getInputProps()} />
                 {isDragActive
@@ -136,7 +135,6 @@ class App extends Component {
           trackNumber={track_numbers}
           toggleTrackNumbers={this.toggleTrackNumbers}
         />
-        <Clipboard trackData={tracks} />
       </div>
     );
   }
