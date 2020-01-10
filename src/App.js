@@ -119,7 +119,6 @@ class App extends Component {
 
     return (
       <div className="container">
-        <DarkModeToggle />
         <Dropzone onDrop={this.onDrop} accept=".nml" multiple={false}>
           {({ getRootProps, getInputProps, isDragActive, isDragReject }) => (
             <section>
@@ -129,6 +128,7 @@ class App extends Component {
                   ? "stop, drop!"
                   : "click here or drag a file to upload"}
               </div>
+              <DarkModeToggle />
             </section>
           )}
         </Dropzone>

@@ -43,14 +43,17 @@ class Tracklist extends Component {
           trackNumber={trackNumber}
           toggleTrackNumbers={toggleTrackNumbers}
         />
-        <button onClick={() => this.props.toggleTrackNumbers()}>
+        <button
+          class="square-button"
+          onClick={() => this.props.toggleTrackNumbers()}
+        >
           Toggle track numbers
         </button>
         <CopyToClipboard
           text={tracksAsString(this.state.trackData)}
           onCopy={() => this.setState({ copied: true })}
         >
-          <button>Copy to clipboard</button>
+          <button class="square-button">Copy to clipboard</button>
         </CopyToClipboard>
 
         {this.state.copied ? (

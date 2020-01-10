@@ -43,6 +43,10 @@ main {
   display: block;
 }
 
+section {
+  display: flex;
+}
+
 /**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
@@ -72,7 +76,7 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace;
+  font-family: "Work Sans", sans-serif;
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -115,7 +119,7 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
+  font-family: "Work Sans", sans-serif;
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -168,7 +172,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
+  font-family: "Work Sans", sans-serif;
   /* 1 */
   font-size: 100%;
   /* 1 */
@@ -410,8 +414,7 @@ h4,
 h5 {
   margin: 1.5rem 0;
   font-weight: 600;
-  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica,
-    Arial, sans-serif;
+  font-family: "Work Sans", sans-serif;
   line-height: 1.2;
   color: #404040;
 }
@@ -508,12 +511,12 @@ pre {
   padding: 1rem;
   tab-size: 2;
   color: #404040;
-  font-family: Menlo, monospace;
+  font-family: "Work Sans", sans-serif;
   font-size: 14px;
   margin: 0 0 1.5rem 0;
 }
 pre code {
-  font-family: Menlo, monospace;
+  font-family: "Work Sans", sans-serif;
   line-height: 1.2;
 }
 
@@ -524,7 +527,7 @@ kbd {
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
   color: #333;
   display: inline-block;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-size: 13px;
   line-height: 1.4;
   margin: 0 0.1em;
@@ -535,7 +538,7 @@ kbd {
 :not(pre) > code {
   color: #404040;
   background: transparent;
-  font-family: Menlo, monospace;
+  font-family: "Work Sans", sans-serif;
   font-size: 14px;
   padding: 0 0.2rem;
   border: 1px solid #dedede;
@@ -763,8 +766,7 @@ button,
   background: #0366ee;
   color: #ffffff;
   font-weight: 600;
-  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica,
-    Arial, sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-size: 1rem;
   text-transform: none;
   padding: 0.75rem 1.25rem;
@@ -1077,24 +1079,32 @@ caption {
   border: 1px solid #404040;
   padding: 0.5rem 1rem;
   margin: 1rem 0 1rem 0;
+  font-family: "Work Sans", sans-serif;
+  width: 40%;
 }
 
 body.light-mode {
+  font-family: "Work Sans", sans-serif;
   background-color: #fff;
   color: #333;
   transition: background-color 0.3s ease;
 }
 body.dark-mode {
+  font-family: "Work Sans", sans-serif;
   background-color: #1a1919;
   color: #fff;
 }
 
 .dark-toggle {
   position: absolute;
-  top: 5px;
-  right: 5px;
-  padding: 10px;
+  top: 0px;
+  right: 0px;
+  padding: 0.5rem 1rem;
+  margin: 1rem 0 1rem 0;
   display: block;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
 }
 
 /*
