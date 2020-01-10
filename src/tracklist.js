@@ -5,7 +5,7 @@ const TrackLayout = props => {
   const rows = props.trackData.map((row, index) => {
     return (
       <li key={index}>
-        {row.artist} - {row.track} {row.label}
+        {row.artist} - {row.track}
       </li>
     );
   });

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Dropzone from "react-dropzone";
 import xml2js from "xml2js";
 import Tracklist from "./tracklist";
+import DarkModeToggle from "./dark-toggle";
 
 class App extends Component {
   state = {
@@ -118,6 +119,7 @@ class App extends Component {
 
     return (
       <div className="container">
+        <DarkModeToggle />
         <Dropzone onDrop={this.onDrop} accept=".nml" multiple={false}>
           {({ getRootProps, getInputProps, isDragActive, isDragReject }) => (
             <section>

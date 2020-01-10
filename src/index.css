@@ -388,7 +388,11 @@ ol,
 ul,
 dl,
 table {
-  margin: 0 0 1.5rem 0;
+  margin: 1rem 0 1rem 0;
+  padding: 0.5rem 1rem;
+  -webkit-column-count: 2; /* Chrome, Safari, Opera */
+  -moz-column-count: 2; /* Firefox */
+  column-count: 2;
 }
 
 ul li ul {
@@ -1072,7 +1076,25 @@ caption {
 .dropzone {
   border: 1px solid #404040;
   padding: 0.5rem 1rem;
-  margin: 1rem 0 0 0;
+  margin: 1rem 0 1rem 0;
+}
+
+body.light-mode {
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+body.dark-mode {
+  background-color: #1a1919;
+  color: #fff;
+}
+
+.dark-toggle {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 10px;
+  display: block;
 }
 
 /*
