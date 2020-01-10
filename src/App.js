@@ -3,6 +3,7 @@ import Dropzone from "react-dropzone";
 import xml2js from "xml2js";
 import Tracklist from "./tracklist";
 import DarkModeToggle from "./dark-toggle";
+import Clipboard from "./clipboard";
 
 class App extends Component {
   state = {
@@ -137,6 +138,7 @@ class App extends Component {
           trackNumber={track_numbers}
           toggleTrackNumbers={this.toggleTrackNumbers}
         />
+        <Clipboard trackData={tracks} />
       </div>
     );
   }

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { CopyToClipboard } from "react-copy-to-clipboard";
 
 const TrackLayout = props => {
   const rows = props.trackData.map((row, index) => {
@@ -27,13 +26,6 @@ class Tracklist extends Component {
     this.state = this.initialState;
   }
   render() {
-    function tracksAsString(props) {
-      const rows = props.map(row => {
-        return row.artist + " - " + row.track;
-      });
-      return rows.join("\n");
-    }
-
     const { trackData, trackNumber, toggleTrackNumbers } = this.props;
 
     return (
@@ -49,13 +41,6 @@ class Tracklist extends Component {
         >
           Toggle track numbers
         </button>
-        <CopyToClipboard
-          text={tracksAsString(this.state.trackData)}
-          onCopy={() => this.setState({ copied: true })}
-        >
-          <button class="square-button">Copy to clipboard</button>
-        </CopyToClipboard>
-
         {this.state.copied ? (
           <span style={{ color: "404040" }}>Copied.</span>
         ) : null}
