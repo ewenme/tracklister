@@ -20,12 +20,17 @@ class Clipboard extends Component {
     }
 
     return (
-      <CopyToClipboard
-        text={tracksAsString(this.props.trackData)}
-        onCopy={() => this.setState({ copied: true })}
-      >
-        <button class="square-button">Copy to clipboard</button>
-      </CopyToClipboard>
+      <React.Fragment>
+        <CopyToClipboard
+          text={tracksAsString(this.props.track_data)}
+          onCopy={() => this.setState({ copied: true })}
+        >
+          <button class="square-button">Copy to clipboard</button>
+        </CopyToClipboard>
+        {this.state.copied ? (
+          <span style={{ color: "404040" }}>Copied.</span>
+        ) : null}
+      </React.Fragment>
     );
   }
 }

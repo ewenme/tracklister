@@ -3,13 +3,14 @@ import Dropzone from "react-dropzone";
 import xml2js from "xml2js";
 import Tracklist from "./tracklist";
 import DarkModeToggle from "./dark-toggle";
+import TrackNoToggle from "./track-no-toggle";
 import Clipboard from "./clipboard";
 
 class App extends Component {
   state = {
     acceptedFiles: [],
-    tracks: [],
-    track_numbers: true
+    track_data: [],
+    track_numbers: false
   };
   constructor() {
     super();
@@ -98,7 +99,7 @@ class App extends Component {
           });
 
           this.setState({
-            tracks: played_tracks
+            track_data: played_tracks
           });
         };
         reader.readAsBinaryString(file);
@@ -109,19 +110,19 @@ class App extends Component {
     };
   }
 
-  toggleTrackNumbers = () => {
-    this.setState(prevState => ({
-      track_numbers: !prevState.track_numbers
-    }));
-  };
+  toggleTrackNumbers() {
+    this.setState({
+      track_numbers: !this.state.track_numbers
+    });
+  }
 
   render() {
-    const { tracks, track_numbers } = this.state;
+    const { track_data, track_numbers } = this.state;
 
     return (
       <div className="container">
         <Dropzone onDrop={this.onDrop} accept=".nml" multiple={false}>
-          {({ getRootProps, getInputProps, isDragActive, isDragReject }) => (
+          {({ getRootProps, getInputProps, isDragActive }) => (
             <section>
               <div {...getRootProps({ className: "dropzone" })}>
                 <input {...getInputProps()} />
@@ -129,16 +130,16 @@ class App extends Component {
                   ? "stop, drop!"
                   : "click here or drag a file to upload"}
               </div>
+              <TrackNoToggle
+                track_numbers={this.state.track_numbers}
+                toggleTrackNumbers={this.toggleTrackNumbers.bind(this)}
+              />
+              <Clipboard track_data={track_data} />
               <DarkModeToggle />
             </section>
           )}
         </Dropzone>
-        <Tracklist
-          trackData={tracks}
-          trackNumber={track_numbers}
-          toggleTrackNumbers={this.toggleTrackNumbers}
-        />
-        <Clipboard trackData={tracks} />
+        <Tracklist track_data={track_data} track_numbers={track_numbers} />
       </div>
     );
   }
