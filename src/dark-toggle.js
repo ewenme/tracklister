@@ -6,23 +6,19 @@ const DarkModeToggle = () => {
   const darkMode = useDarkMode(false);
 
   const ToggleControl = ({ defaultChecked, onChange }) => (
-    <label>
+    <React.Fragment>
       <Toggle
+        id="dark-status"
         defaultChecked={defaultChecked}
         icons={false}
         onChange={onChange}
       />
-      <span>Dark mode</span>
-    </label>
+      <label htmlFor="dark-status">Dark mode</label>
+    </React.Fragment>
   );
 
   return (
-    <div className="dark-toggle">
-      <ToggleControl
-        defaultChecked={darkMode.value}
-        onChange={darkMode.toggle}
-      />
-    </div>
+    <ToggleControl defaultChecked={darkMode.value} onChange={darkMode.toggle} />
   );
 };
 

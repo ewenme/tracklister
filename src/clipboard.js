@@ -27,9 +27,6 @@ class Clipboard extends Component {
         >
           <button class="square-button">Copy to clipboard</button>
         </CopyToClipboard>
-        {this.state.copied ? (
-          <span style={{ color: "404040" }}>Copied.</span>
-        ) : null}
       </React.Fragment>
     );
   }

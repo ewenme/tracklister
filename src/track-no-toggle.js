@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Toggle from "react-toggle";
 
 class TrackNoToggle extends Component {
   constructor(props) {
@@ -11,9 +12,15 @@ class TrackNoToggle extends Component {
 
   render() {
     return (
-      <button class="square-button" onClick={this.props.toggleTrackNumbers}>
-        Toggle track numbers
-      </button>
+      <React.Fragment>
+        <Toggle
+          id="track-no-status"
+          defaultChecked={this.props.track_numbers}
+          icons={false}
+          onChange={this.props.toggleTrackNumbers}
+        />
+        <label htmlFor="track-no-status">Track numbers</label>
+      </React.Fragment>
     );
   }
 }

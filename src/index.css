@@ -285,6 +285,7 @@ textarea {
   /* 1 */
   padding: 0;
   /* 2 */
+  display: inline;
 }
 
 /**
@@ -992,8 +993,11 @@ select::-ms-expand {
 label {
   font-weight: 600;
   max-width: 100%;
-  display: block;
-  margin: 1rem 0 0.5rem;
+  display: inline-block;
+  white-space: nowrap;
+  text-indent: -22px;
+  padding: 0.75rem 0rem;
+  margin: 1rem 1rem 1rem 1rem;
 }
 
 @media (min-width: 600px) {
@@ -1095,10 +1099,18 @@ body.dark-mode {
   color: #fff;
 }
 
-.dark-toggle {
+.dark-toggle,
+.track-toggle,
+.react-toggle {
+  padding: 0.75rem 1.25rem;
+  margin: 1rem 0rem 1rem 0rem;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box; /* Firefox, other Gecko */
   box-sizing: border-box; /* Opera/IE 8+ */
+}
+
+.checkboxes input {
+  vertical-align: middle;
 }
 
 /*
