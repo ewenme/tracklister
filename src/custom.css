@@ -1,0 +1,71 @@
+section {
+  display: flex;
+}
+
+.dropzone {
+  border: 1px solid #404040;
+  padding: 0.75rem 1.25rem;
+  margin: 1rem 1rem 1rem 1rem;
+  font-family: "Work Sans", sans-serif;
+  width: 40%;
+}
+
+body.light-mode {
+  font-family: "Work Sans", sans-serif;
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+body.dark-mode {
+  font-family: "Work Sans", sans-serif;
+  background-color: #1a1919;
+  color: #fff;
+}
+
+.dark-toggle,
+.track-toggle,
+.react-toggle {
+  padding: 0.75rem 1.25rem;
+  margin: 1rem 0rem 1rem 0rem;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
+}
+
+.checkboxes input {
+  vertical-align: middle;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  display: inline;
+}
+
+p,
+ol,
+ul,
+dl,
+table {
+  margin: 1rem 0 1rem 0;
+  padding: 0.5rem 1rem;
+  -webkit-column-count: 2; /* Chrome, Safari, Opera */
+  -moz-column-count: 2; /* Firefox */
+  column-count: 2;
+}
+
+.button,
+a.button,
+button,
+[type="submit"],
+[type="reset"],
+[type="button"] {
+  margin: 1rem 1rem 1rem 1rem;
+}
+
+label {
+  display: inline-block;
+  white-space: nowrap;
+  text-indent: -22px;
+  padding: 0.75rem 0rem;
+  margin: 1rem 1rem 1rem 1rem;
+}
