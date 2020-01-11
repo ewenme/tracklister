@@ -6,16 +6,14 @@ const DarkModeToggle = () => {
   const darkMode = useDarkMode(false);
 
   const ToggleControl = ({ defaultChecked, onChange }) => (
-    <span className="toggle-control">
+    <label>
       <Toggle
-        className="dmcheck"
-        type="checkbox"
         defaultChecked={defaultChecked}
+        icons={false}
         onChange={onChange}
-        id="dmcheck"
       />
-      <label htmlFor="dmcheck" />
-    </span>
+      <span>Dark mode</span>
+    </label>
   );
 
   return (

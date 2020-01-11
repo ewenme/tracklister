@@ -770,7 +770,7 @@ button,
   font-size: 1rem;
   text-transform: none;
   padding: 0.75rem 1.25rem;
-  margin: 0 1rem 0.5rem 0;
+  margin: 1rem 1rem 1rem 1rem;
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
@@ -1077,8 +1077,8 @@ caption {
 
 .dropzone {
   border: 1px solid #404040;
-  padding: 0.5rem 1rem;
-  margin: 1rem 0 1rem 0;
+  padding: 0.75rem 1.25rem;
+  margin: 1rem 1rem 1rem 1rem;
   font-family: "Work Sans", sans-serif;
   width: 40%;
 }
@@ -1096,12 +1096,6 @@ body.dark-mode {
 }
 
 .dark-toggle {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  padding: 0.5rem 1rem;
-  margin: 1rem 0 1rem 0;
-  display: block;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box; /* Firefox, other Gecko */
   box-sizing: border-box; /* Opera/IE 8+ */

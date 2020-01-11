@@ -130,11 +130,11 @@ class App extends Component {
                   ? "stop, drop!"
                   : "click here or drag a file to upload"}
               </div>
+              <Clipboard track_data={track_data} />
               <TrackNoToggle
                 track_numbers={this.state.track_numbers}
                 toggleTrackNumbers={this.toggleTrackNumbers.bind(this)}
               />
-              <Clipboard track_data={track_data} />
               <DarkModeToggle />
             </section>
           )}
