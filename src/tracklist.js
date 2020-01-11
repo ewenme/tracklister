@@ -29,9 +29,9 @@ class Tracklist extends Component {
     const { track_data, track_numbers } = this.props;
 
     return (
-      <React.Fragment>
+      <div id="tracklist">
         <TrackLayout track_data={track_data} track_numbers={track_numbers} />
-      </React.Fragment>
+      </div>
     );
   }
 }

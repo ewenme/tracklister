@@ -6,15 +6,20 @@ class Clipboard extends Component {
     super(props);
 
     this.initialState = {
-      copied: false
+      copied: false,
+      track_numbers: this.props.track_numbers
     };
 
     this.state = this.initialState;
   }
   render() {
-    function tracksAsString(props) {
-      const rows = props.map(row => {
-        return row.artist + " - " + row.track;
+    function tracksAsString(tracks, track_no_status) {
+      const rows = tracks.map((row, index) => {
+        if (track_no_status) {
+          return index + 1 + ". " + row.artist + " - " + row.track;
+        } else {
+          return row.artist + " - " + row.track;
+        }
       });
       return rows.join("\n");
     }
@@ -22,7 +27,7 @@ class Clipboard extends Component {
     return (
       <React.Fragment>
         <CopyToClipboard
-          text={tracksAsString(this.props.track_data)}
+          text={tracksAsString(this.props.track_data, this.props.track_numbers)}
           onCopy={() => this.setState({ copied: true })}
         >
           <button class="square-button">Copy to clipboard</button>

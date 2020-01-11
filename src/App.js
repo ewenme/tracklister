@@ -102,7 +102,7 @@ class App extends Component {
             track_data: played_tracks
           });
         };
-        reader.readAsBinaryString(file);
+        reader.readAsText(file);
       });
       this.setState({
         acceptedFiles: acceptedFiles
@@ -130,12 +130,15 @@ class App extends Component {
                   ? "stop, drop!"
                   : "click here or drag a file to upload"}
               </div>
-              <Clipboard track_data={track_data} />
               <TrackNoToggle
                 track_numbers={this.state.track_numbers}
                 toggleTrackNumbers={this.toggleTrackNumbers.bind(this)}
               />
               <DarkModeToggle />
+              <Clipboard
+                track_data={track_data}
+                track_numbers={track_numbers}
+              />
             </section>
           )}
         </Dropzone>
