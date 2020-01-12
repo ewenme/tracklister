@@ -2,14 +2,9 @@ section {
   display: flex;
 }
 
-.dropzone {
-  border: 1px solid #404040;
-  padding: 0.75rem 1.25rem;
-  margin: 1rem 1rem 1rem 1rem;
-  font-family: "Work Sans", sans-serif;
-  width: 40%;
-}
-
+/*
+dark mode
+*/
 body.light-mode {
   font-family: "Work Sans", sans-serif;
   background-color: #fff;
@@ -22,6 +17,9 @@ body.dark-mode {
   color: #fff;
 }
 
+/*
+  toggles
+  */
 .dark-toggle,
 .track-toggle,
 .react-toggle {
@@ -32,27 +30,41 @@ body.dark-mode {
   box-sizing: border-box; /* Opera/IE 8+ */
 }
 
-.checkboxes input {
-  vertical-align: middle;
-}
-
 [type="checkbox"],
 [type="radio"] {
   display: inline;
 }
 
-p,
-ol,
-ul,
-dl,
-table {
-  margin: 1rem 0 1rem 0;
-  padding: 0.5rem 1rem;
-  -webkit-column-count: 2; /* Chrome, Safari, Opera */
-  -moz-column-count: 2; /* Firefox */
-  column-count: 2;
+label {
+  font-size: 1rem;
+  display: inline-block;
+  text-indent: -22px;
+  padding: 0.75rem 0rem;
+  margin: 1rem 1rem 1rem 1rem;
 }
 
+/*
+dropzone
+*/
+.dropzone {
+  font-size: 1rem;
+  border: 1px solid #404040;
+  padding: 0.75rem 1.25rem;
+  margin: 1rem 1rem 1rem 1rem;
+  font-family: "Work Sans", sans-serif;
+  width: 40%;
+}
+
+p,
+ol {
+  margin: 1rem 0 1rem 0;
+  padding: 0.5rem 1rem;
+}
+
+li {
+  padding: 1rem 0 0 0;
+  margin: 0;
+}
 .button,
 a.button,
 button,
@@ -62,10 +74,6 @@ button,
   margin: 1rem 1rem 1rem 1rem;
 }
 
-label {
-  display: inline-block;
-  white-space: nowrap;
-  text-indent: -22px;
-  padding: 0.75rem 0rem;
-  margin: 1rem 1rem 1rem 1rem;
+.track-title {
+  font-family: "Work Sans ExtraLight", sans-serif;
 }

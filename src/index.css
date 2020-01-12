@@ -125,7 +125,7 @@ samp {
  * Add the correct font size in all browsers.
  */
 small {
-  font-size: 80%;
+  font-size: 90%;
 }
 
 /**
@@ -380,7 +380,7 @@ html {
 body {
   color: #404040;
   background: white;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 p,

@@ -4,7 +4,13 @@ const TrackLayout = props => {
   const rows = props.track_data.map((row, index) => {
     return (
       <li key={index}>
-        {row.artist} - {row.track}
+        <span class="track-artist">
+          <b>{row.artist}</b>{" "}
+        </span>
+        <br />
+        <span class="track-title">
+          <small>{row.track}</small>
+        </span>
       </li>
     );
   });

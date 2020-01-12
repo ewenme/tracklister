@@ -3,7 +3,7 @@ import useDarkMode from "use-dark-mode";
 import Toggle from "react-toggle";
 
 const DarkModeToggle = () => {
-  const darkMode = useDarkMode(false);
+  const darkMode = useDarkMode(true);
 
   const ToggleControl = ({ defaultChecked, onChange }) => (
     <React.Fragment>
