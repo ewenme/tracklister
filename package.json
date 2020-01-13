@@ -2,7 +2,7 @@
   "name": "tracklister",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ewenme.github.io/tracklister",
+  "homepage": "tracklister.club",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
@@ -19,7 +19,7 @@
     "xml2js": "^0.4.23"
   },
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && cp CNAME build/CNAME",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build"
