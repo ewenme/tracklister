@@ -1,4 +1,4 @@
-A simple app to help wrangle .nml files from [Traktor](https://en.wikipedia.org/wiki/Traktor) into beautiful tracklists.
+A simple app to turn .txt files exported from [Rekordbox](https://rekordbox.com/en/) and .nml files exported from [Traktor](https://en.wikipedia.org/wiki/Traktor) into beautiful tracklists.
 
 ## Available Scripts
 
@@ -16,8 +16,3 @@ You will also see any lint errors in the console.
 
 Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
