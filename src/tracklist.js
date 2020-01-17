@@ -4,11 +4,11 @@ const TrackLayout = props => {
   const rows = props.track_data.map((row, index) => {
     return (
       <li key={index}>
-        <span class="track-artist">
+        <span className="track-artist">
           <b>{row.artist}</b>{" "}
         </span>
         <br />
-        <span class="track-title">
+        <span className="track-title">
           <small>{row.track}</small>
         </span>
       </li>

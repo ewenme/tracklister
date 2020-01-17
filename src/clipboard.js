@@ -30,7 +30,7 @@ class Clipboard extends Component {
           text={tracksAsString(this.props.track_data, this.props.track_numbers)}
           onCopy={() => this.setState({ copied: true })}
         >
-          <button class="square-button">Copy to clipboard</button>
+          <button className="square-button">Copy to clipboard</button>
         </CopyToClipboard>
       </React.Fragment>
     );
