@@ -164,7 +164,7 @@ class App extends Component {
 
     return (
       <div className="container">
-        <Dropzone onDrop={this.onDrop} multiple={false}>
+        <Dropzone onDrop={this.onDrop} accept=".nml, .txt" multiple={false}>
           {({ getRootProps, getInputProps, isDragActive }) => (
             <section>
               <div {...getRootProps({ className: "dropzone" })}>
