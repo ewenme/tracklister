@@ -1,4 +1,4 @@
-A simple app to turn .txt files exported from [Rekordbox](https://rekordbox.com/en/) and .nml files exported from [Traktor](https://en.wikipedia.org/wiki/Traktor) into beautiful tracklists.
+A simple app to turn .txt files exported from [Rekordbox](https://rekordbox.com/en/) and .nml files exported from [Traktor](https://en.wikipedia.org/wiki/Traktor) into beautiful tracklists. Built with [React](https://reactjs.org/).
 
 ## Available Scripts
 
