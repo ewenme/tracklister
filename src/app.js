@@ -5,12 +5,13 @@ import Tracklist from "./tracklist";
 import DarkModeToggle from "./dark-toggle";
 import TrackNoToggle from "./track-no-toggle";
 import Clipboard from "./clipboard";
+import Screenshot from "./screenshot";
 
 class App extends Component {
   state = {
     acceptedFiles: [],
     track_data: [],
-    track_numbers: false
+    track_numbers: true
   };
   constructor() {
     super();
@@ -182,6 +183,7 @@ class App extends Component {
                 track_data={track_data}
                 track_numbers={track_numbers}
               />
+              <Screenshot></Screenshot>
             </section>
           )}
         </Dropzone>
