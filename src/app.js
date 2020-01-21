@@ -6,6 +6,7 @@ import DarkModeToggle from "./dark-toggle";
 import TrackNoToggle from "./track-no-toggle";
 import Clipboard from "./clipboard";
 import Screenshot from "./screenshot";
+import ColourPicker from "./colour-picker";
 
 class App extends Component {
   state = {
@@ -174,16 +175,17 @@ class App extends Component {
                   ? "stop, drop!"
                   : "click here or drag a file to upload"}
               </div>
-              <TrackNoToggle
-                track_numbers={this.state.track_numbers}
-                toggleTrackNumbers={this.toggleTrackNumbers.bind(this)}
-              />
-              <DarkModeToggle />
               <Clipboard
                 track_data={track_data}
                 track_numbers={track_numbers}
               />
               <Screenshot></Screenshot>
+              <DarkModeToggle />
+              <ColourPicker />
+              <TrackNoToggle
+                track_numbers={this.state.track_numbers}
+                toggleTrackNumbers={this.toggleTrackNumbers.bind(this)}
+              />
             </section>
           )}
         </Dropzone>

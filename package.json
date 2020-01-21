@@ -10,6 +10,7 @@
     "file-saver": "^2.0.2",
     "gh-pages": "^2.2.0",
     "react": "^16.12.0",
+    "react-color": "^2.18.0",
     "react-copy-to-clipboard": "^5.0.2",
     "react-dom": "^16.12.0",
     "react-dropzone": "^10.2.1",

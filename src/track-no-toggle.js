@@ -19,7 +19,7 @@ class TrackNoToggle extends Component {
           icons={false}
           onChange={this.props.toggleTrackNumbers}
         />
-        <label htmlFor="track-no-status">Track numbers</label>
+        <label htmlFor="track-no-status">track numbers</label>
       </React.Fragment>
     );
   }

@@ -3,23 +3,22 @@ import useDarkMode from "use-dark-mode";
 import Toggle from "react-toggle";
 
 const DarkModeToggle = () => {
-  const darkMode = useDarkMode(true);
+  const darkMode = useDarkMode(false);
 
-  const ToggleControl = ({ defaultChecked, onChange }) => (
+  const ToggleControl = ({ onClick }) => (
     <React.Fragment>
-      <Toggle
+      <button
+        className="muted-button"
         id="dark-status"
-        defaultChecked={defaultChecked}
         icons={false}
-        onChange={onChange}
-      />
-      <label htmlFor="dark-status">Dark mode</label>
+        onClick={onClick}
+      >
+        toggle text colour
+      </button>
     </React.Fragment>
   );
 
-  return (
-    <ToggleControl defaultChecked={darkMode.value} onChange={darkMode.toggle} />
-  );
+  return <ToggleControl onClick={darkMode.toggle} />;
 };
 
 export default DarkModeToggle;

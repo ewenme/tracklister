@@ -14,8 +14,8 @@ class Screenshot extends Component {
   render() {
     return (
       <React.Fragment>
-        <button className="square-button" onClick={this.printDocument}>
-          Take a screenshot
+        <button className="muted-button" onClick={this.printDocument}>
+          take a screenshot
         </button>
       </React.Fragment>
     );

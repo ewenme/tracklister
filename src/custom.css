@@ -16,6 +16,24 @@ body.dark-mode {
   color: #fff;
 }
 
+div,
+ul,
+li {
+  background-color: inherit;
+}
+
+.dropzone {
+  font-size: 1rem;
+  border: 1px solid #cdcdcd;
+  padding: 0.75rem 1.25rem;
+  margin: 1rem 1rem 1rem 1rem;
+  width: 40%;
+  color: inherit;
+  font-weight: 600;
+  text-align: center;
+  line-height: 2;
+}
+
 .dark-toggle,
 .track-toggle,
 .react-toggle {
@@ -24,11 +42,6 @@ body.dark-mode {
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box; /* Firefox, other Gecko */
   box-sizing: border-box; /* Opera/IE 8+ */
-}
-
-[type="checkbox"],
-[type="radio"] {
-  display: inline;
 }
 
 label {
@@ -40,13 +53,10 @@ label {
   margin: 1rem 0rem 1rem 0rem;
 }
 
-.dropzone {
-  font-size: 1rem;
-  border: 1px solid #404040;
-  padding: 0.75rem 1.25rem;
+.muted-button {
   margin: 1rem 1rem 1rem 1rem;
-  font-family: "Work Sans", sans-serif;
-  width: 40%;
+  border-radius: 0px;
+  color: inherit;
 }
 
 p,
@@ -73,21 +83,7 @@ li {
   page-break-inside: avoid;
   break-inside: avoid;
 }
-.button,
-a.button,
-button,
-[type="submit"],
-[type="reset"],
-[type="button"] {
-  margin: 1rem 1rem 1rem 1rem;
-}
 
 .track-title {
   font-family: "Work Sans Light", sans-serif;
-}
-
-div,
-ul,
-li {
-  background-color: inherit;
 }
