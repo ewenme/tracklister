@@ -7,7 +7,11 @@ class ColourPicker extends Component {
   };
 
   render() {
-    return <CompactPicker onChangeComplete={this.handleChangeComplete} />;
+    return (
+      <div className={"bodyCol"}>
+        <CompactPicker onChangeComplete={this.handleChangeComplete} />
+      </div>
+    );
   }
 }
 

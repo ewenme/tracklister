@@ -168,27 +168,25 @@ class App extends Component {
       <div className="container">
         <Dropzone onDrop={this.onDrop} accept=".nml, .txt" multiple={false}>
           {({ getRootProps, getInputProps, isDragActive }) => (
-            <section>
-              <div {...getRootProps({ className: "dropzone" })}>
-                <input {...getInputProps()} />
-                {isDragActive
-                  ? "stop, drop!"
-                  : "click here or drag a file to upload"}
-              </div>
-              <Clipboard
-                track_data={track_data}
-                track_numbers={track_numbers}
-              />
-              <Screenshot></Screenshot>
-              <DarkModeToggle />
-              <ColourPicker />
-              <TrackNoToggle
-                track_numbers={this.state.track_numbers}
-                toggleTrackNumbers={this.toggleTrackNumbers.bind(this)}
-              />
-            </section>
+            <div {...getRootProps({ className: "dropzone" })}>
+              <input {...getInputProps()} />
+              {isDragActive
+                ? "stop, drop!"
+                : "click here or drag a file to upload"}
+            </div>
           )}
         </Dropzone>
+        <section>
+          <Clipboard track_data={track_data} track_numbers={track_numbers} />
+          <Screenshot></Screenshot>
+          <DarkModeToggle />
+          <ColourPicker />
+          <TrackNoToggle
+            track_numbers={this.state.track_numbers}
+            toggleTrackNumbers={this.toggleTrackNumbers.bind(this)}
+          />
+        </section>
+
         <Tracklist track_data={track_data} track_numbers={track_numbers} />
       </div>
     );

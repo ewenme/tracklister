@@ -12,15 +12,15 @@ class TrackNoToggle extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <label>
         <Toggle
           id="track-no-status"
           defaultChecked={this.props.track_numbers}
           icons={false}
           onChange={this.props.toggleTrackNumbers}
         />
-        <label htmlFor="track-no-status">track numbers</label>
-      </React.Fragment>
+        <span className="label-text">track numbers</span>
+      </label>
     );
   }
 }

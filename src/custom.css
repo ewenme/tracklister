@@ -1,5 +1,6 @@
 section {
-  display: flex;
+  display: inline;
+  vertical-align: top;
 }
 
 body {
@@ -27,36 +28,53 @@ li {
   border: 1px solid #cdcdcd;
   padding: 0.75rem 1.25rem;
   margin: 1rem 1rem 1rem 1rem;
-  width: 40%;
   color: inherit;
   font-weight: 600;
   text-align: center;
-  line-height: 2;
-}
-
-.dark-toggle,
-.track-toggle,
-.react-toggle {
-  padding: 0.75rem 1.25rem;
-  margin: 1rem 0rem 1rem 0rem;
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box; /* Firefox, other Gecko */
-  box-sizing: border-box; /* Opera/IE 8+ */
-}
-
-label {
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  line-height: 1;
-  padding: 0rem 0rem;
-  margin: 1rem 0rem 1rem 0rem;
 }
 
 .muted-button {
-  margin: 1rem 1rem 1rem 1rem;
+  margin: 0rem 1rem 1rem 1rem;
   border-radius: 0px;
   color: inherit;
+  vertical-align: top;
+}
+
+.bodyCol {
+  display: inline;
+  line-height: normal;
+  margin: 0rem 1rem 1rem 1rem;
+}
+
+.compact-picker {
+  background-color: transparent;
+}
+
+.react-toggle {
+  padding: 0.75rem 1.25rem;
+  margin: 0rem 0rem 1rem 0rem;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
+  display: inline-block;
+  vertical-align: top;
+}
+
+label,
+.label-text {
+  vertical-align: top;
+  font-weight: 600;
+  font-size: 1rem;
+  display: inline-block;
+}
+
+label {
+  margin: 0rem 0rem 1rem 0rem;
+}
+
+.label-text {
+  padding: 0.75rem 0rem;
+  margin: 0rem 1rem 1rem 0rem;
 }
 
 p,
