@@ -46,10 +46,6 @@ li {
   margin: 0rem 1rem 1rem 1rem;
 }
 
-.compact-picker {
-  background-color: transparent;
-}
-
 .react-toggle {
   padding: 0.75rem 1.25rem;
   margin: 0rem 0rem 1rem 0rem;
@@ -100,6 +96,10 @@ li {
   -webkit-column-break-inside: avoid;
   page-break-inside: avoid;
   break-inside: avoid;
+}
+
+#tracklist {
+  padding: 1rem 0 1rem 0;
 }
 
 .track-title {
