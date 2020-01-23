@@ -37,6 +37,7 @@ li {
 
 .modal {
   font-size: 12px;
+  color: #333;
 }
 .modal > .header {
   width: 100%;
