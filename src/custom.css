@@ -23,6 +23,53 @@ li {
   background-color: inherit;
 }
 
+.top-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+#about {
+  padding: 0.75rem 1.25rem;
+  margin: 1rem 1rem 1rem 1rem;
+  max-width: 20%;
+}
+
+.modal {
+  font-size: 12px;
+}
+.modal > .header {
+  width: 100%;
+  border-bottom: 1px solid gray;
+  font-size: 18px;
+  text-align: center;
+  padding: 5px;
+}
+.modal > .content {
+  width: 100%;
+  padding: 10px 5px;
+}
+.modal > .actions {
+  width: 100%;
+  padding: 10px 5px;
+  margin: auto;
+  text-align: center;
+}
+.modal > .close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: -10px;
+  top: -10px;
+  font-size: 24px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #cfcece;
+  color: #333;
+}
+
 .dropzone {
   font-size: 1rem;
   border: 1px solid #cdcdcd;
@@ -31,6 +78,7 @@ li {
   color: inherit;
   font-weight: 600;
   text-align: center;
+  width: 80%;
 }
 
 .muted-button {

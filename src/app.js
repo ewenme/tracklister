@@ -7,6 +7,7 @@ import TrackNoToggle from "./track-no-toggle";
 import Clipboard from "./clipboard";
 import Screenshot from "./screenshot";
 import ColourPicker from "./colour-picker";
+import About from "./about.js";
 
 class App extends Component {
   state = {
@@ -166,16 +167,19 @@ class App extends Component {
 
     return (
       <div className="container">
-        <Dropzone onDrop={this.onDrop} accept=".nml, .txt" multiple={false}>
-          {({ getRootProps, getInputProps, isDragActive }) => (
-            <div {...getRootProps({ className: "dropzone" })}>
-              <input {...getInputProps()} />
-              {isDragActive
-                ? "stop, drop!"
-                : "click here or drag a file to upload"}
-            </div>
-          )}
-        </Dropzone>
+        <div className="top-bar">
+          <About></About>
+          <Dropzone onDrop={this.onDrop} accept=".nml, .txt" multiple={false}>
+            {({ getRootProps, getInputProps, isDragActive }) => (
+              <div {...getRootProps({ className: "dropzone" })}>
+                <input {...getInputProps()} />
+                {isDragActive
+                  ? "stop, drop!"
+                  : "click here or drag a file to upload"}
+              </div>
+            )}
+          </Dropzone>
+        </div>
         <section>
           <Clipboard track_data={track_data} track_numbers={track_numbers} />
           <Screenshot></Screenshot>

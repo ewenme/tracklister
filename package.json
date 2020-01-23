@@ -16,6 +16,7 @@
     "react-dropzone": "^10.2.1",
     "react-scripts": "3.3.0",
     "react-toggle": "^4.1.1",
+    "reactjs-popup": "^1.5.0",
     "typeface-work-sans": "0.0.72",
     "use-dark-mode": "^2.3.1",
     "xml2js": "^0.4.23"
