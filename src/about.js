@@ -1,8 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import Popup from "reactjs-popup";
 
-class About extends Component {
-  render() {
+function About() {
     return (
       <Popup
         trigger={
@@ -60,7 +59,6 @@ class About extends Component {
         )}
       </Popup>
     );
-  }
 }
 
 export default About;
