@@ -24,12 +24,15 @@ class App extends Component {
           .pop()
           .toLowerCase();
 
-        if (extension === "nml") {
           const reader = new FileReader();
 
           reader.onabort = () => console.log("file reading was aborted");
           reader.onerror = () => console.log("file reading has failed");
+
           reader.onload = () => {
+
+            if (extension === "nml") {
+
             const binaryStr = reader.result;
             const parser = new xml2js.Parser();
             parser.parseString(binaryStr);
@@ -113,14 +116,9 @@ class App extends Component {
             this.setState({
               track_data: played_tracks
             });
-          };
-          reader.readAsText(file);
-        } else if (extension === "txt") {
-          const reader = new FileReader();
+          }
+         else if (extension === "txt") {
 
-          reader.onabort = () => console.log("file reading was aborted");
-          reader.onerror = () => console.log("file reading has failed");
-          reader.onload = () => {
             const binaryStr = reader.result;
 
             let data_lines = binaryStr.split("\n");
@@ -147,14 +145,16 @@ class App extends Component {
               track_data: tracks
             });
           };
-          reader.readAsText(file);
         }
-      });
+          reader.readAsText(file);
+      },
+      
       this.setState({
         acceptedFiles: acceptedFiles
-      });
-    };
-  }
+      }))
+    }
+  };
+  
 
   toggleTrackNumbers() {
     this.setState({
