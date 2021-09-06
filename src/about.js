@@ -14,7 +14,7 @@ function About() {
       >
         {close => (
           <div className="modal">
-            <a className="close" onClick={close}>
+            <a href="/" className="close" onClick={close}>
               &times;
             </a>
             <div className="header"> about / help </div>
