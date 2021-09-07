@@ -25,26 +25,19 @@ class App extends Component {
           .toLowerCase();
 
           const reader = new FileReader();
-
           reader.onabort = () => console.log("file reading was aborted");
           reader.onerror = () => console.log("file reading has failed");
-
           reader.onload = () => {
 
-            const binaryStr = reader.result;
+          const binaryStr = reader.result;
 
-            if (extension === "nml") {
-
-            let tracks = parseNML(binaryStr);
-
-            this.setState({
-              track_data: tracks
-            });
-          }
-         else if (extension === "txt") {
-
+          if (extension === "nml") {
+          let tracks = parseNML(binaryStr);
+          this.setState({
+            track_data: tracks
+          });
+        } else if (extension === "txt") {
             let tracks = parseText(binaryStr)
-
             this.setState({
               track_data: tracks
             });
@@ -52,7 +45,6 @@ class App extends Component {
         }
           reader.readAsText(file);
       },
-      
       this.setState({
         acceptedFiles: acceptedFiles
       }))

@@ -1,21 +1,19 @@
-import React, { Component } from "react";
+import React from "react";
 import Toggle from "react-toggle";
 
-class TrackNoToggle extends Component {
+function TrackNoToggle(props) {
 
-  render() {
     return (
       <label>
         <Toggle
           id="track-no-status"
-          defaultChecked={this.props.track_numbers}
+          defaultChecked={props.track_numbers}
           icons={false}
-          onChange={this.props.toggleTrackNumbers}
+          onChange={props.toggleTrackNumbers}
         />
         <span className="label-text">track numbers</span>
       </label>
     );
-  }
 }
 
 export default TrackNoToggle;
