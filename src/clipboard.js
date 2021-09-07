@@ -1,31 +1,32 @@
-import React, { Component } from "react";
-import { CopyToClipboard } from "react-copy-to-clipboard";
+import React from "react";
+import useClipboard from "react-use-clipboard";
 
-class Clipboard extends Component {
-
-  render() {
-    function tracksAsString(tracks, track_no_status) {
-      const rows = tracks.map((row, index) => {
-        if (track_no_status) {
-          return index + 1 + ". " + row.artist + " - " + row.track;
-        } else {
-          return row.artist + " - " + row.track;
-        }
-      });
-      return rows.join("\n");
+function tracksAsString(tracks, track_no_status) {
+  const rows = tracks.map((row, index) => {
+    if (track_no_status) {
+      return index + 1 + ". " + row.artist + " - " + row.track;
+    } else {
+      return row.artist + " - " + row.track;
     }
+  });
+  return rows.join("\n");
+}
+
+function Clipboard(props) {
+
+  const [isCopied, setCopied] = useClipboard(
+    tracksAsString(props.track_data, props.track_numbers), {
+      successDuration: 1000,
+    }
+    );
 
     return (
       <React.Fragment>
-        <CopyToClipboard
-          text={tracksAsString(this.props.track_data, this.props.track_numbers)}
-          onCopy={() => this.setState({ copied: true })}
-        >
-          <button className="muted-button">copy to clipboard</button>
-        </CopyToClipboard>
+          <button className="muted-button" onClick={setCopied}>
+            {isCopied ? "copied! 👍" : "copy to clipboard"}
+            </button>
       </React.Fragment>
     );
-  }
 }
 
 export default Clipboard;
