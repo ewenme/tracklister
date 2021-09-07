@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 const TrackLayout = props => {
   const rows = props.track_data.map((row, index) => {
@@ -20,17 +20,13 @@ const TrackLayout = props => {
   return <ol style={{ listStyleType: list_style }}>{rows}</ol>;
 };
 
-class Tracklist extends Component {
-
-  render() {
-    const { track_data, track_numbers } = this.props;
+function Tracklist(props) {
 
     return (
       <div id="tracklist">
-        <TrackLayout track_data={track_data} track_numbers={track_numbers} />
+        <TrackLayout track_data={props.track_data} track_numbers={props.track_numbers} />
       </div>
     );
-  }
 }
 
 export default Tracklist;

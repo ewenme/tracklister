@@ -21,11 +21,9 @@ function Clipboard(props) {
     );
 
     return (
-      <React.Fragment>
           <button className="muted-button" onClick={setCopied}>
             {isCopied ? "copied! 👍" : "copy to clipboard"}
             </button>
-      </React.Fragment>
     );
 }
 
