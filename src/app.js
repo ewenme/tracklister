@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Dropzone from "react-dropzone";
 import Tracklist from "./tracklist";
-import DarkModeToggle from "./dark-toggle";
 import TrackNoToggle from "./track-no-toggle";
 import Clipboard from "./clipboard";
 import About from "./about.js";
@@ -78,7 +77,7 @@ class App extends Component {
         <div className="flex-none p-2 border-2 border-black">
           <Dropzone onDrop={this.onDrop} accept=".nml, .txt" multiple={false}>
             {({ getRootProps, getInputProps, isDragActive }) => (
-              <div {...getRootProps({})}>
+              <div className="flex h-full" {...getRootProps({})}>
                 <input {...getInputProps()} />
                 {isDragActive
                   ? "click here or drag a file to upload"
