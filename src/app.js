@@ -4,8 +4,6 @@ import Tracklist from "./tracklist";
 import DarkModeToggle from "./dark-toggle";
 import TrackNoToggle from "./track-no-toggle";
 import Clipboard from "./clipboard";
-import Screenshot from "./screenshot";
-import ColourPicker from "./colour-picker";
 import About from "./about.js";
 import {parseNML, parseText} from "./file-parsers";
 
@@ -62,32 +60,38 @@ class App extends Component {
     const { track_data, track_numbers } = this.state;
 
     return (
-      <div className="container">
-        <div className="top-bar">
-          <About></About>
-          <Dropzone onDrop={this.onDrop} accept=".nml, .txt" multiple={false}>
-            {({ getRootProps, getInputProps, isDragActive }) => (
-              <div {...getRootProps({ className: "dropzone" })}>
-                <input {...getInputProps()} />
-                {isDragActive
-                  ? "stop, drop!"
-                  : "click here or drag a file to upload"}
-              </div>
-            )}
-          </Dropzone>
-        </div>
-        <section>
-          <Clipboard track_data={track_data} track_numbers={track_numbers} />
-          <Screenshot></Screenshot>
+      <div className="container mx-auto h-screen">
+        <div className="flex justify-center items-center">
+          <div className="flex-grow">
+          <h1 className="text-6xl"> tracklister </h1>
+          </div>
+        <div className="flex flex-row justify-end space-x-4">
+        <Clipboard track_data={track_data} track_numbers={track_numbers} />
           <DarkModeToggle />
-          <ColourPicker />
           <TrackNoToggle
             track_numbers={this.state.track_numbers}
             toggleTrackNumbers={this.toggleTrackNumbers.bind(this)}
           />
-        </section>
-
-        <Tracklist track_data={track_data} track_numbers={track_numbers} />
+        <About></About>
+        </div>
+        </div>
+        <div className="flex h-full pt-4">
+        <div className="flex-none p-2 border-2 border-black">
+          <Dropzone onDrop={this.onDrop} accept=".nml, .txt" multiple={false}>
+            {({ getRootProps, getInputProps, isDragActive }) => (
+              <div {...getRootProps({})}>
+                <input {...getInputProps()} />
+                {isDragActive
+                  ? "click here or drag a file to upload"
+                  : "click here or drag a file to upload"}
+              </div>
+            )}
+          </Dropzone>
+          </div>
+          <div className="flex-grow space-x-2 items-end">
+          <Tracklist track_data={track_data} track_numbers={track_numbers} />
+          </div>
+        </div>
       </div>
     );
   }

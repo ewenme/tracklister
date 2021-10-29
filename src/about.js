@@ -5,7 +5,7 @@ function About() {
     return (
       <Popup
         trigger={
-          <button className="muted-button" id="about">
+          <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" id="about">
             {" "}
             about / help{" "}
           </button>
@@ -48,7 +48,6 @@ function About() {
               <button
                 className="muted-button"
                 onClick={() => {
-                  console.log("modal closed ");
                   close();
                 }}
               >

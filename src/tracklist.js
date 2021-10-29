@@ -15,15 +15,15 @@ const TrackLayout = props => {
     );
   });
 
-  const list_style = props.track_numbers ? "decimal" : "none";
+  const list_style = props.track_numbers ? "list-decimal" : "list-none";
 
-  return <ol style={{ listStyleType: list_style }}>{rows}</ol>;
+  return <ol className={"list-inside " + list_style}>{rows}</ol>;
 };
 
 function Tracklist(props) {
 
     return (
-      <div id="tracklist">
+      <div id="tracklist" className="text-right">
         <TrackLayout track_data={props.track_data} track_numbers={props.track_numbers} />
       </div>
     );
