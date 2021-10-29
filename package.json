@@ -4,14 +4,12 @@
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.4.0",
+    "@tailwindcss/typography": "^0.4.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
-    "dom-to-image": "^2.6.0",
-    "file-saver": "^2.0.2",
     "gh-pages": "^2.2.0",
     "react": "^16.12.0",
-    "react-color": "^2.18.0",
     "react-copy-to-clipboard": "^5.0.2",
     "react-dom": "^16.12.0",
     "react-dropzone": "^10.2.1",
@@ -20,7 +18,6 @@
     "react-use-clipboard": "1.0.7",
     "reactjs-popup": "^1.5.0",
     "typeface-work-sans": "0.0.72",
-    "use-dark-mode": "^2.3.1",
     "xml2js": "^0.4.23"
   },
   "scripts": {
