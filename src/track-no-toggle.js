@@ -4,14 +4,14 @@ import Toggle from "react-toggle";
 function TrackNoToggle(props) {
 
     return (
-      <label>
+      <label className="flex flex-row">
         <Toggle
           id="track-no-status"
           defaultChecked={props.track_numbers}
           icons={false}
           onChange={props.toggleTrackNumbers}
         />
-        <span className="label-text">track numbers</span>
+        <span className="pl-2">track numbers</span>
       </label>
     );
 }

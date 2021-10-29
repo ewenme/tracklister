@@ -65,13 +65,12 @@ class App extends Component {
           <div className="flex-grow">
           <h1 className="text-6xl"> tracklister </h1>
           </div>
-        <div className="flex flex-row justify-end space-x-4">
-        <Clipboard track_data={track_data} track_numbers={track_numbers} />
-          <DarkModeToggle />
-          <TrackNoToggle
+        <div className="flex flex-row justify-end items-center space-x-4">
+        <TrackNoToggle
             track_numbers={this.state.track_numbers}
             toggleTrackNumbers={this.toggleTrackNumbers.bind(this)}
           />
+        <Clipboard track_data={track_data} track_numbers={track_numbers} />
         <About></About>
         </div>
         </div>

@@ -3,7 +3,7 @@ import React from "react";
 const TrackLayout = props => {
   const rows = props.track_data.map((row, index) => {
     return (
-      <li key={index}>
+      <li className="pt-4" key={index}>
         <span className="track-artist">
           <b>{row.artist}</b>{" "}
         </span>
