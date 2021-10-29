@@ -1,10 +1,3 @@
-/*!
- * The buffer module from node.js, for the browser.
- *
- * @author   Feross Aboukhadijeh <http://feross.org>
- * @license  MIT
- */
-
 /*
 object-assign
 (c) Sindre Sorhus
@@ -12,13 +5,30 @@ object-assign
 */
 
 /*!
+  Copyright (c) 2017 Jed Watson.
+  Licensed under the MIT License (MIT), see
+  http://jedwatson.github.io/classnames
+*/
+
+/*!
+ * The buffer module from node.js, for the browser.
+ *
+ * @author   Feross Aboukhadijeh <http://feross.org>
+ * @license  MIT
+ */
+
+/*!
  * reactjs-popup v1.5.0
  * (c) 2019-present Youssouf EL AZIZI <youssoufelazizi@gmail.com>
  * Released under the MIT License.
  */
 
-/** @license React v16.12.0
- * react.production.min.js
+/*! http://mths.be/fromcodepoint v0.1.0 by @mathias */
+
+/*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
+
+/** @license React v0.18.0
+ * scheduler.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
@@ -35,19 +45,11 @@ object-assign
  * LICENSE file in the root directory of this source tree.
  */
 
-/** @license React v0.18.0
- * scheduler.production.min.js
+/** @license React v16.12.0
+ * react.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-
-/*!
-  Copyright (c) 2017 Jed Watson.
-  Licensed under the MIT License (MIT), see
-  http://jedwatson.github.io/classnames
-*/
-
-/*! http://mths.be/fromcodepoint v0.1.0 by @mathias */
