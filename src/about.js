@@ -22,10 +22,14 @@ function About() {
               <a href="https://rekordbox.com/en/">Rekordbox</a> and .nml files
               exported from{" "}
               <a href="https://en.wikipedia.org/wiki/Traktor">Traktor</a> into
-              beautiful tracklists. Built with{" "}
-              <a href="https://reactjs.org/">React</a>. Made by{" "}
-              <a href="https://twitter.com/ewen_">@ewen_</a>, source code on{" "}
+              beautiful tracklists. source code on{" "}
               <a href="https://github.com/ewenme/tracklister">Github</a>.
+              </p>
+              <p>
+              <a href="https://ewen6.typeform.com/to/meXt691B">Feedback welcome :]</a>
+              </p>
+              <p>
+              <a href="https://github.com/ewenme/tracklister">PRs also welcome, this is open source !</a>
               </p>
               <h4>Rekordbox support</h4>
               <p>
