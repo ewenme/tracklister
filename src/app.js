@@ -4,7 +4,7 @@ import Tracklist from "./tracklist";
 import TrackNoToggle from "./track-no-toggle";
 import Clipboard from "./clipboard";
 import About from "./about.js";
-import {parseNML, parseText} from "./file-parsers";
+import {parseTraktor, parseRekordbox} from "./file-parsers";
 
 class App extends Component {
   state = {
@@ -29,12 +29,12 @@ class App extends Component {
           const binaryStr = reader.result;
 
           if (extension === "nml") {
-          let tracks = parseNML(binaryStr);
+          let tracks = parseTraktor(binaryStr);
           this.setState({
             track_data: tracks
           });
         } else if (extension === "txt") {
-            let tracks = parseText(binaryStr)
+            let tracks = parseRekordbox(binaryStr)
             this.setState({
               track_data: tracks
             });
@@ -62,7 +62,7 @@ class App extends Component {
       <div className="container mx-auto h-screen">
         <div className="flex justify-center items-center">
           <div className="flex-grow">
-          <h1 className="text-6xl"> tracklister </h1>
+          <h1 className="text-6xl font-display"> tracklister </h1>
           </div>
         <div className="flex flex-row justify-end items-center space-x-4">
         <TrackNoToggle

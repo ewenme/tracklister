@@ -1,6 +1,6 @@
 import xml2js from "xml2js";
 
-function parseNML(file) {
+function parseTraktor(file) {
 
         const parser = new xml2js.Parser();
         parser.parseString(file);
@@ -84,7 +84,7 @@ function parseNML(file) {
         return played_tracks;
 }
 
-function parseText(file) {
+function parseRekordbox(file) {
 
   let data_lines = file.split("\n");
 
@@ -109,4 +109,4 @@ function parseText(file) {
   return tracks;
 }
 
-export {parseNML, parseText}
+export {parseTraktor, parseRekordbox}
