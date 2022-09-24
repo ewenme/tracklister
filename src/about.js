@@ -15,7 +15,7 @@ function About() {
               <a href="https://ewen6.typeform.com/to/meXt691B">Feedback welcome :]</a>
               </p>
               <p>
-              <a href="https://github.com/ewenme/tracklister">PRs also welcome !</a>
+              <a href="https://github.com/ewenme/tracklister">Pull Requests also welcome !</a>
               </p>
               <h4>Rekordbox support</h4>
               <p>

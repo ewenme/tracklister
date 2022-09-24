@@ -21,7 +21,7 @@ function Clipboard(props) {
     );
 
     return (
-          <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" onClick={setCopied}>
+          <button className="bg-white hover:bg-gray-100 text-gray-800 py-2 px-4 border border-gray-400 rounded shadow" onClick={setCopied}>
             {isCopied ? "copied! 👍" : "copy to clipboard"}
             </button>
     );
