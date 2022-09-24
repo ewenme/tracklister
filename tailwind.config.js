@@ -3,9 +3,8 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      display: ['Bungee Spice', 'cursive'],
       'sans': ['Inconsolata', 'monospace'],
-      serif: ['Merriweather', 'serif']
+      serif: ['Inconsolata', 'monospace']
     }
   },
   variants: {

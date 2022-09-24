@@ -1,9 +1,16 @@
 import React from "react";
+import About from "./about.js";
 
 const TrackLayout = props => {
+
+  if (props.track_data.length === 0) {
+    return (
+      About()
+    )
+  }
   const rows = props.track_data.map((row, index) => {
     return (
-      <li className="pt-4" key={index}>
+      <li className="pb-4" key={index}>
         <span className="track-artist">
           <b>{row.artist}</b>{" "}
         </span>
@@ -23,7 +30,7 @@ const TrackLayout = props => {
 function Tracklist(props) {
 
     return (
-      <div id="tracklist" className="text-right">
+      <div id="tracklist">
         <TrackLayout track_data={props.track_data} track_numbers={props.track_numbers} />
       </div>
     );

@@ -3,7 +3,6 @@ import Dropzone from "react-dropzone";
 import Tracklist from "./tracklist";
 import TrackNoToggle from "./track-no-toggle";
 import Clipboard from "./clipboard";
-import About from "./about.js";
 import {parseTraktor, parseRekordbox} from "./file-parsers";
 
 class App extends Component {
@@ -59,22 +58,20 @@ class App extends Component {
     const { track_data, track_numbers } = this.state;
 
     return (
-      <div className="container mx-auto h-screen">
-        <div className="flex justify-center items-center">
-          <div className="flex-grow">
-          <h1 className="text-6xl font-display"> tracklister </h1>
-          </div>
-        <div className="flex flex-row justify-end items-center space-x-4">
+      <div className="container flex p-4">
+        <div className="flex-col flex-grow">
+          <div className="flex flex-row items-center space-x-4 pb-10">
         <TrackNoToggle
             track_numbers={this.state.track_numbers}
             toggleTrackNumbers={this.toggleTrackNumbers.bind(this)}
           />
         <Clipboard track_data={track_data} track_numbers={track_numbers} />
-        <About></About>
         </div>
+          <div className="space-x-2">
+          <Tracklist track_data={track_data} track_numbers={track_numbers} />
+          </div>
         </div>
-        <div className="flex h-full pt-4">
-        <div className="flex-none p-2 border-2 border-black">
+          <div className="p-4 border-4">
           <Dropzone onDrop={this.onDrop} accept=".nml, .txt" multiple={false}>
             {({ getRootProps, getInputProps, isDragActive }) => (
               <div className="flex h-full" {...getRootProps({})}>
@@ -86,10 +83,6 @@ class App extends Component {
             )}
           </Dropzone>
           </div>
-          <div className="flex-grow space-x-2 items-end">
-          <Tracklist track_data={track_data} track_numbers={track_numbers} />
-          </div>
-        </div>
       </div>
     );
   }
