@@ -4,6 +4,13 @@ object-assign
 @license MIT
 */
 
+/* @license
+Papa Parse
+v5.3.2
+https://github.com/mholt/PapaParse
+License: MIT
+*/
+
 /*!
   Copyright (c) 2017 Jed Watson.
   Licensed under the MIT License (MIT), see
@@ -15,12 +22,6 @@ object-assign
  *
  * @author   Feross Aboukhadijeh <http://feross.org>
  * @license  MIT
- */
-
-/*!
- * reactjs-popup v1.5.0
- * (c) 2019-present Youssouf EL AZIZI <youssoufelazizi@gmail.com>
- * Released under the MIT License.
  */
 
 /*! http://mths.be/fromcodepoint v0.1.0 by @mathias */
