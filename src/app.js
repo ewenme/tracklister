@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import Dropzone from "react-dropzone";
 import Tracklist from "./tracklist";
 import TrackNoToggle from "./track-no-toggle";
