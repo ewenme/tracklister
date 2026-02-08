@@ -58,8 +58,8 @@ class App extends Component {
     const { track_data, track_numbers } = this.state;
 
     return (
-      <div className="container mx-auto flex flex-col md:flex-row p-4 gap-4 md:gap-6">
-          <div className="w-full md:w-64 shrink-0 p-4 border-4 min-h-[120px] md:min-h-0">
+      <div className="container mx-auto flex flex-col p-4 gap-4 md:gap-6">
+          <div className="w-full p-4 border-4">
           <Dropzone onDrop={this.onDrop} accept=".nml, .txt" multiple={false}>
             {({ getRootProps, getInputProps, isDragActive }) => (
               <div className="flex h-full items-center justify-center text-center" {...getRootProps({})}>

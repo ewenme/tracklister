@@ -25,6 +25,9 @@ function About() {
               </a>
               .
               </p>
+              <p>
+              Made by <a href="https://ewen.io">ewen</a>. <a href="https://github.com/ewenme/tracklister">View source</a>.
+              </p>
             </div>
     )
 }
