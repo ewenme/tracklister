@@ -1,4 +1,3 @@
-import React from "react";
 import About from "./about.js";
 
 const TrackLayout = props => {
