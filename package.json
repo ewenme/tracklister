@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@craco/craco": "^5.9.0",
+    "@craco/craco": "^7.1.0",
     "@tailwindcss/typography": "^0.5.19",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
@@ -16,7 +16,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-dropzone": "^10.2.1",
-    "react-scripts": "^0.0.0",
+    "react-scripts": "5.0.1",
     "react-toggle": "^4.1.1",
     "react-use-clipboard": "1.0.7",
     "stream-browserify": "^3.0.0",
