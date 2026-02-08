@@ -58,23 +58,11 @@ class App extends Component {
     const { track_data, track_numbers } = this.state;
 
     return (
-      <div className="container flex p-4">
-        <div className="flex-col flex-grow">
-          <div className="flex flex-row items-center space-x-4 pb-10">
-        <TrackNoToggle
-            track_numbers={this.state.track_numbers}
-            toggleTrackNumbers={this.toggleTrackNumbers.bind(this)}
-          />
-        <Clipboard track_data={track_data} track_numbers={track_numbers} />
-        </div>
-          <div className="space-x-2">
-          <Tracklist track_data={track_data} track_numbers={track_numbers} />
-          </div>
-        </div>
-          <div className="p-4 border-4">
+      <div className="container mx-auto flex flex-col md:flex-row p-4 gap-4 md:gap-6">
+          <div className="w-full md:w-64 shrink-0 p-4 border-4 min-h-[120px] md:min-h-0">
           <Dropzone onDrop={this.onDrop} accept=".nml, .txt" multiple={false}>
             {({ getRootProps, getInputProps, isDragActive }) => (
-              <div className="flex h-full" {...getRootProps({})}>
+              <div className="flex h-full items-center justify-center text-center" {...getRootProps({})}>
                 <input {...getInputProps()} />
                 {isDragActive
                   ? "click here or drag a file to upload"
@@ -83,6 +71,18 @@ class App extends Component {
             )}
           </Dropzone>
           </div>
+        <div className="flex flex-col flex-grow min-w-0">
+          <div className="flex flex-row items-center space-x-4 pb-6 md:pb-10">
+        <TrackNoToggle
+            track_numbers={this.state.track_numbers}
+            toggleTrackNumbers={this.toggleTrackNumbers.bind(this)}
+          />
+        <Clipboard track_data={track_data} track_numbers={track_numbers} />
+        </div>
+          <div>
+          <Tracklist track_data={track_data} track_numbers={track_numbers} />
+          </div>
+        </div>
       </div>
     );
   }
